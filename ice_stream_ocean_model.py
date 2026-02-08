@@ -1,6 +1,6 @@
 """
 Directional Coupled Ice Stream Ocean Model
-Logan E. Mann // Ice and Climate Group Georgia Tech
+Alex Robel & Logan E. Mann // Ice and Climate Group Georgia Tech
 Converted from MATLAB to Python
 """
 
