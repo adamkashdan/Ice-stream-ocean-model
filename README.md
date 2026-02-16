@@ -26,3 +26,6 @@ $\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
 - **u₀**  
   Transition velocity at which basal sliding behavior changes from viscous to plastic.
+
+2. Implementation in your Python Script
+You can add a new function to your ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
