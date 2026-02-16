@@ -229,6 +229,32 @@ def main():
     
     return time, soln, p
 
+def calculate_zoet_basal_drag(u, N, phi_degree=15, debris_factor=0.1):
+    """
+    Implements Luke Zoet's regularized Coulomb law with a debris modifier.
+    u: sliding velocity
+    N: effective pressure (ice pressure - water pressure)
+    phi_degree: internal friction angle of the till
+    debris_factor: rate-strengthening term (0.0 = clean ice, >0.0 = dirty ice)
+    """
+    import numpy as np
+    
+    # Coulomb limit (The plastic ceiling)
+    tan_phi = np.tan(np.radians(phi_degree))
+    tau_c = N * tan_phi
+    
+    # Transition velocity (experimentally derived constant)
+    u0 = 100 # m/yr (example value)
+    
+    # Regularized Coulomb component (The "Jump" logic)
+    drag_coulomb = tau_c * (u / (u + u0))
+    
+    # Zoet's Debris Component (The "Rate-Strengthening" logic)
+    # This keeps the model stable and prevents infinite runaway
+    drag_debris = debris_factor * u 
+    
+    return drag_coulomb + drag_debris
+
 
 def plot_results(time, h, L, e, Q, Qg, ub, hg, Tb, bg, To, Qm, p):
     """Plot main results"""
