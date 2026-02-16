@@ -6,9 +6,9 @@ Integrating Luke Zoet's experimental findings (The Ring Shear Device) into your 
 
 Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/QFY2H5DVWpw?si=WsjMqNuydUynR7Gx)), the "Regularized Coulomb" law is what allows for the "Stick-Slip" behavior needed for GZW spacing, while the "Debris" component adds stability.
 
-1. The Physics: Adding the Zoet Slip Law
-   Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
-   This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
+## 1. The Physics:
+Adding the Zoet Slip Law Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
+This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
 
 $\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
@@ -24,9 +24,10 @@ Where
 - **u₀**  
   Transition velocity at which basal sliding behavior changes from viscous to plastic.
 
-2. Implementation in your Python Script
-You can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
-3. How this creates "Periodic GZWs" in our model. By using this function, our model will now behave like a "Sticking and Slipping" system:
+## 2. Implementation in Python Script
+Can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
+
+## 3. How this creates "Periodic GZWs" in our model. By using this function, our model will now behave like a "Sticking and Slipping" system:
    Phase A (Stick): Velocity ($u$) is low. Drag is below the Coulomb limit. The grounding line stays still. Sediment builds up (GZW forms).
    Phase B (Pressure Build): Water pressure increases, decreasing $N$. This lowers the "ceiling" ($\tau_c$).
    Phase C (Slip): Once the driving stress exceeds the lowered $\tau_c$, the ice "breaks" into the plastic regime. It surges forward to a new position.
@@ -58,7 +59,7 @@ Following the *stick–slip* concept of Zoet, sediment flux is assumed to be pro
 
 $q_s = u \, h_t$
 
-### Where
+Where
 
 - **q_s**  
   Sediment flux (volume of sediment transported per unit width).
@@ -69,7 +70,7 @@ $q_s = u \, h_t$
 - **h_t**  
   Thickness of the deforming till layer.
 
-## 3. Python Implementation for our model
-We can add this logic to our time-stepping loop in ice_stream_ocean_model.py. This function calculates how much the "wedge" grows at the specific coordinate of the grounding line ($x_{gl}$).
+## 3. Python Implementation for model
+Can add this logic to our time-stepping loop in ice_stream_ocean_model.py. This function calculates how much the "wedge" grows at the specific coordinate of the grounding line ($x_{gl}$).
   
   
