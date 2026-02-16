@@ -27,7 +27,7 @@ Where
 ## 2. Implementation in Python Script
 Can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
 
-## 3. How this creates "Periodic GZWs" in model. 
+## 3. How this creates "Periodic GZWs" in model 
 By using this function, model will now behave like a "Sticking and Slipping" system:
 Phase A (Stick): Velocity ($u$) is low. Drag is below the Coulomb limit. The grounding line stays still. Sediment builds up (GZW forms).
 Phase B (Pressure Build): Water pressure increases, decreasing $N$. This lowers the "ceiling" ($\tau_c$).
