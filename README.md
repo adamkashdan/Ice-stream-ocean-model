@@ -74,4 +74,9 @@ Where
 ## 3. Python Implementation for model
 Can add this logic to our time-stepping loop in ice_stream_ocean_model.py. This function calculates how much the "wedge" grows at the specific coordinate of the grounding line ($x_{gl}$).
   
-  
+## 4. Why this proves "Periodic Spacing"
+When you run this in loop, the following behavior emerges:
+Stick Phase: $x_{gl}$ is stationary. update_gzw_height repeatedly adds height to the same spot. A steep GZW grows.
+Slip Phase: The "Zoet Slip Law" triggers. $x_{gl}$ jumps forward 10km in the model.
+New Stick Phase: The grounding line stops at $x_{gl} + 10km$. A new wedge starts to grow.
+The Result: Your z_bed array will eventually show a series of bumps—periodically spaced GZWs—whose distance is determined entirely by your till mechanics. 
