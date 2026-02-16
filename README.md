@@ -12,7 +12,7 @@ Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/
 
 The basal shear stress is defined as:
 
-τ_b = (τ_c · u) / (u + u₀)
+$\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
 ### Where
 
