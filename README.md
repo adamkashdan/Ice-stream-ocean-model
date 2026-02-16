@@ -26,11 +26,12 @@ Where
 
 2. Implementation in your Python Script
 You can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
-3. How this creates "Periodic GZWs" in our Model. By using this function, our model will now behave like a "Sticking and Slipping" system:
+3. How this creates "Periodic GZWs" in our model. By using this function, our model will now behave like a "Sticking and Slipping" system:
    Phase A (Stick): Velocity ($u$) is low. Drag is below the Coulomb limit. The grounding line stays still. Sediment builds up (GZW forms).
    Phase B (Pressure Build): Water pressure increases, decreasing $N$. This lowers the "ceiling" ($\tau_c$).
    Phase C (Slip): Once the driving stress exceeds the lowered $\tau_c$, the ice "breaks" into the plastic regime. It surges forward to a new position.
    Phase D (Reset): The surge thins the ice, $N$ increases again, and the ice "sticks" at a new location. A new GZW starts to form at the new gap.
 
 Adding a Sediment Flux component is the next step in turning our physics model into a geomorphological tool. In glaciology, the growth of a Grounding Zone Wedge (GZW) is essentially a mass-balance problem: sediment is delivered to the grounding line by the ice stream and "dumped" where the ice starts to float.
+1. The Physics: The Exner Equation for Subglacial SedimentTo model the changing height of the seafloor (the GZW), we use a version of the Exner Equation. It states that the change in bed elevation ($z_b$) over time depends on the divergence of the sediment flux ($q_s$):
    
