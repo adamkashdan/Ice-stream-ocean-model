@@ -9,13 +9,10 @@ Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/
 1. The Physics: Adding the Zoet Slip Law
    Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
    This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
-## Basal Shear Stress Parameterization
-
-The basal shear stress is defined as:
 
 $\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
-### Where
+Where
 
 - **τ_c (Coulomb limit)**  
   Maximum shear stress the till can sustain before failure:  
@@ -28,7 +25,7 @@ $\tau_b = \dfrac{\tau_c u}{u + u_0}$
   Transition velocity at which basal sliding behavior changes from viscous to plastic.
 
 2. Implementation in your Python Script
-You can add a new function to your ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
+You can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
 3. How this creates "Periodic GZWs" in our Model. By using this function, our model will now behave like a "Sticking and Slipping" system:
    Phase A (Stick): Velocity ($u$) is low. Drag is below the Coulomb limit. The grounding line stays still. Sediment builds up (GZW forms).
    Phase B (Pressure Build): Water pressure increases, decreasing $N$. This lowers the "ceiling" ($\tau_c$).
