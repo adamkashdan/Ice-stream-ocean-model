@@ -8,15 +8,20 @@ Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/
 
 1. The Physics: Adding the Zoet Slip LawCurrently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
    This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
-\[
-\tau_b = \frac{\tau_c \, u}{u + u_0}
-\]
+## Basal Shear Stress Parameterization
 
-**Where:**
+The basal shear stress is defined as:
 
-- **\(\tau_c\)** (*Coulomb limit*): the maximum stress the till can withstand before failure  
-  \[
-  \tau_c = N \tan \phi
-  \]
+τ_b = (τ_c · u) / (u + u₀)
 
-- **\(u_0\)**: a transition velocity at which basal sliding switches from viscous to plastic behavior.
+### Where
+
+- **τ_c (Coulomb limit)**  
+  Maximum shear stress the till can sustain before failure:  
+  τ_c = N · tan(φ)
+
+- **u**  
+  Basal sliding velocity.
+
+- **u₀**  
+  Transition velocity at which basal sliding behavior changes from viscous to plastic.
