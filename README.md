@@ -34,4 +34,19 @@ You can add a new function to our ice_stream_ocean_model.py to calculate the bas
 
 Adding a Sediment Flux component is the next step in turning our physics model into a geomorphological tool. In glaciology, the growth of a Grounding Zone Wedge (GZW) is essentially a mass-balance problem: sediment is delivered to the grounding line by the ice stream and "dumped" where the ice starts to float.
 1. The Physics: The Exner Equation for Subglacial SedimentTo model the changing height of the seafloor (the GZW), we use a version of the Exner Equation. It states that the change in bed elevation ($z_b$) over time depends on the divergence of the sediment flux ($q_s$):
-   
+
+∂z_b / ∂t = − 1 / (1 − λ) · ∇ · q_s
+
+Where
+
+- **z_b**  
+  Bed elevation.
+
+- **q_s**  
+  Sediment flux — the volume of sediment transported per unit width.
+
+- **λ**  
+  Porosity of the till (typically 0.3–0.4).
+
+- **∇ · q_s**  
+  Divergence of the sediment flux.
