@@ -255,6 +255,27 @@ def calculate_zoet_basal_drag(u, N, phi_degree=15, debris_factor=0.1):
     
     return drag_coulomb + drag_debris
 
+def update_gzw_height(z_bed, u_gl, x_gl, dt, till_thickness=0.5, porosity=0.3):
+    """
+    Updates the seafloor bathymetry to simulate GZW growth.
+    z_bed: array of seafloor elevation
+    u_gl: velocity at the grounding line
+    x_gl: index of the grounding line
+    dt: time step
+    till_thickness: thickness of the mobile till layer (meters)
+    """
+    # Calculate sediment flux (m^2/yr)
+    q_s = u_gl * till_thickness
+    
+    # Growth rate at the grounding line (Exner Equation simplified)
+    # We assume all sediment drops at the grounding line grid cell
+    dz_dt = q_s / (1 - porosity)
+    
+    # Update the bed elevation at the grounding line
+    z_bed[x_gl] += dz_dt * dt
+    
+    return z_bed
+
 
 def plot_results(time, h, L, e, Q, Qg, ub, hg, Tb, bg, To, Qm, p):
     """Plot main results"""
