@@ -29,3 +29,8 @@ $\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
 2. Implementation in your Python Script
 You can add a new function to your ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
+3. How this creates "Periodic GZWs" in your ModelBy using this function, your model will now behave like a "Sticking and Slipping" system:
+   Phase A (Stick): Velocity ($u$) is low. Drag is below the Coulomb limit. The grounding line stays still. Sediment builds up (GZW forms).
+   Phase B (Pressure Build): Water pressure increases, decreasing $N$. This lowers the "ceiling" ($\tau_c$).
+   Phase C (Slip): Once the driving stress exceeds the lowered $\tau_c$, the ice "breaks" into the plastic regime. It surges forward to a new position.
+   Phase D (Reset): The surge thins the ice, $N$ increases again, and the ice "sticks" at a new location. A new GZW starts to form at the new gap.
