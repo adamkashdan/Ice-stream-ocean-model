@@ -69,6 +69,7 @@ $q_s = u \, h_t$
 - **h_t**  
   Thickness of the deforming till layer.
 
-## 3. Python Implementation for your ModelYou can add this logic to your time-stepping loop in ice_stream_ocean_model.py. This function calculates how much the "wedge" grows at the specific coordinate of the grounding line ($x_{gl}$).
+## 3. Python Implementation for our model
+We can add this logic to our time-stepping loop in ice_stream_ocean_model.py. This function calculates how much the "wedge" grows at the specific coordinate of the grounding line ($x_{gl}$).
   
   
