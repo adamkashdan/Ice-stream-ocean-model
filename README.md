@@ -25,7 +25,7 @@ Where
   Transition velocity at which basal sliding behavior changes from viscous to plastic.
 
 ## 2. Implementation in Python Script
-Can add a new function to our ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
+Can add a new function to ice_stream_ocean_model.py to calculate the basal friction based on these experimental parameters.
 
 ## 3. How this creates "Periodic GZWs" in model 
 By using this function, model will now behave like a "Sticking and Slipping" system:
