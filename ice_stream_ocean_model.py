@@ -276,6 +276,26 @@ def update_gzw_height(z_bed, u_gl, x_gl, dt, till_thickness=0.5, porosity=0.3):
     
     return z_bed
 
+def handle_rhythmic_retreat(current_gl_x, stress_balance, threshold=0.9):
+    """
+    Determines if the ice stays to build a GZW or jumps to a new location.
+    current_gl_x: Current grounding line position
+    stress_balance: Ratio of driving stress to basal resistance
+    threshold: The 'break point' where the till fails
+    """
+    # If driving stress exceeds resistance, we trigger a SLIP
+    if stress_balance > threshold:
+        # Jump distance is tied to the internal oscillation (Robel's physics)
+        # We ensure a jump of at least 5km to avoid overprinting
+        jump_distance_km = np.random.uniform(5, 12) 
+        new_gl_x = current_gl_x - jump_distance_km
+        is_slipping = True
+    else:
+        new_gl_x = current_gl_x
+        is_slipping = False
+        
+    return new_gl_x, is_slipping
+
 
 def plot_results(time, h, L, e, Q, Qg, ub, hg, Tb, bg, To, Qm, p):
     """Plot main results"""
