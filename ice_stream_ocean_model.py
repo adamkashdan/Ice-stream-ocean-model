@@ -2,6 +2,10 @@
 Directional Coupled Ice Stream Ocean Model
 Alex Robel & Logan E. Mann // Ice and Climate Group Georgia Tech
 Converted from MATLAB to Python
+Add Adam Kashdan
+1. Implements Luke Zoet's regularized Coulomb law with a debris modifier.
+2. Updates the seafloor bathymetry to simulate GZW growth.
+3. Determines if the ice stays to build a GZW or jumps to a new location.
 """
 
 import numpy as np
