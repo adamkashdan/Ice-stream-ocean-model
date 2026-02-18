@@ -80,3 +80,8 @@ Stick Phase: $x_{gl}$ is stationary. update_gzw_height repeatedly adds height to
 Slip Phase: The "Zoet Slip Law" triggers. $x_{gl}$ jumps forward 10km in the model.
 New Stick Phase: The grounding line stops at $x_{gl} + 10km$. A new wedge starts to grow.
 The Result: Your z_bed array will eventually show a series of bumps—periodically spaced GZWs—whose distance is determined entirely by your till mechanics. 
+
+## 5. Technical Note: Preventing "Overprinting"
+Mentions "overprinting." This is the biggest challenge in model.
+The Problem: If the glacier retreats too slowly, the new GZW will just sit on top of the old one, creating one giant pile.
+The Solution: It need to ensure your retreat rate ($dR/dt$) is faster than the wedge growth rate ($dH/dt$). In Python code, this means the "Slip" phase must move the grounding line far enough that the next "Stick" phase creates a distinct, separate bump.
