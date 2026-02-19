@@ -14,14 +14,14 @@ $\tau_b = \dfrac{\tau_c u}{u + u_0}$
 
 Where
 
-- **τ_c (Coulomb limit)**  
+- **$τ_c$ (Coulomb limit)**  
   Maximum shear stress the till can sustain before failure:  
   $τ_c$ = N · tan(φ)
 
 - **u**  
   Basal sliding velocity.
 
-- **u₀**  
+- **$u_o$**  
   Transition velocity at which basal sliding behavior changes from viscous to plastic.
 
 ## 2. Implementation in Python Script
