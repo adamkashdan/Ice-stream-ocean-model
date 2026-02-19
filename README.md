@@ -42,16 +42,16 @@ $\frac{\partial z_b}{\partial t} = -\frac{1}{1-\lambda}\nabla\cdot q_s$
 
 Where
 
-- **z_b**  
+- **$z_b$**  
   Bed elevation.
 
-- **q_s**  
+- **$q_s$**  
   Sediment flux — the volume of sediment transported per unit width.
 
 - **λ**  
   Porosity of the till (typically 0.3–0.4).
 
-- **∇ · q_s**  
+- **∇ · $q_s$**  
   Divergence of the sediment flux.
 
 ## 5. Calculating q_s (the “Conveyor Belt”)
@@ -62,13 +62,13 @@ $q_s = u \, h_t$
 
 Where
 
-- **q_s**  
+- **$q_s$**  
   Sediment flux (volume of sediment transported per unit width).
 
 - **u**  
   Basal sliding velocity.
 
-- **h_t**  
+- **$h_t$**  
   Thickness of the deforming till layer.
 
 ## 6. Python Implementation for model
