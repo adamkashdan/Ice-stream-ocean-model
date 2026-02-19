@@ -16,7 +16,7 @@ Where
 
 - **τ_c (Coulomb limit)**  
   Maximum shear stress the till can sustain before failure:  
-  τ_c = N · tan(φ)
+  $τ_c$ = N · tan(φ)
 
 - **u**  
   Basal sliding velocity.
