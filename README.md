@@ -91,5 +91,5 @@ Concern about overprinting; the model needs a "threshold-and-reset" logic. The g
 ## 9. The Logic: "The Jump Distance"
 To avoid overprinting, we need to introduce a Minimum Jump Distance ($L_{jump}$). In nature, this is often controlled by the bathymetry (the next "hill" or shallow spot on the seafloor). In Phyton code, we can tie the "Slip" phase to a rapid drop in basal resistance ($\tau_b$) that only stops when the ice reaches a new equilibrium.
 
-## 10. Updating your Python Script (ice_stream_ocean_model.py)
-Add this logic to your simulation loop to handle the transition from "Building a GZW" to "Jumping to avoid overprinting."
+## 10. Updating Python Script (ice_stream_ocean_model.py)
+Add this logic to simulation loop to handle the transition from "Building a GZW" to "Jumping to avoid overprinting."
