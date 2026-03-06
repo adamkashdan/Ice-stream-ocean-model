@@ -6,7 +6,7 @@ Integrating Luke Zoet's experimental findings (The Ring Shear Device) into your 
 
 Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/QFY2H5DVWpw?si=WsjMqNuydUynR7Gx)), the "Regularized Coulomb" law is what allows for the "Stick-Slip" behavior needed for GZW spacing, while the "Debris" component adds stability.
 
-## 1. The Physics one:
+## 1. The Physics Zoet Slip Law:
 Adding the Zoet Slip Law Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
 This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
 
@@ -36,7 +36,7 @@ Phase D (Reset): The surge thins the ice, $N$ increases again, and the ice "stic
 
 Adding a Sediment Flux component is the next step in turning our physics model into a geomorphological tool. In glaciology, the growth of a Grounding Zone Wedge (GZW) is essentially a mass-balance problem: sediment is delivered to the grounding line by the ice stream and "dumped" where the ice starts to float.
 
-## 4. The Physics 2:
+## 4. The Physics Exner Equation:
    The Exner Equation for Subglacial SedimentTo model the changing height of the seafloor (the GZW), we use a version of the Exner Equation. It states that the change in bed elevation ($z_b$) over time depends on the divergence of the sediment flux ($q_s$):
 
 $\frac{\partial z_b}{\partial t} = -\frac{1}{1-\lambda}\nabla\cdot q_s$
