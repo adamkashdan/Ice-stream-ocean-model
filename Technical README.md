@@ -37,7 +37,7 @@ GZWs are modeled using a piecewise Gaussian kernel to reflect the asymmetry of s
 
 ## 3. Stratigraphic Horizon Definitions
 
-The script reconstructs five primary horizons mirroring the **R_2018 Beaufort Sea** dataset:
+The script reconstructs five primary horizons mirroring the **R_2018 Barents Sea** dataset:
 
 1. **PQ:** Pre-Quaternary basement.
 2. **TPQ:** Top Pre-Quaternary unconformity (includes narrow ridge features).
