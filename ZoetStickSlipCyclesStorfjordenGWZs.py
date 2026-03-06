@@ -37,8 +37,8 @@ def regularized_coulomb_drag(U_b, N, mu_c=0.6, A_visc=1e4, p=1.0,
     mu_c        : float  — Coulomb friction coefficient
     A_visc      : float  — viscous drag coefficient (Pa yr/m)
     p           : float  — rollover sharpness [Zoet seminar 19:04]
-    has_clasts  : bool   — large clasts present → lower transition U_t [16:28]
-    has_debris  : bool   — debris-laden basal ice → rate-strengthening [48:21]
+    has_clasts  : bool   — large clasts present → lower transition U_t [Video 16:28]
+    has_debris  : bool   — debris-laden basal ice → rate-strengthening [Video 48:21]
     bed_type    : str    — 'soft' (till) or 'hard' (bedrock)
 
     Returns
