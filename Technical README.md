@@ -1,12 +1,8 @@
-This **Technical README** is designed to accompany your script. It serves as the "user manual" that bridges your Python code with the specific physical insights from Luke's 2026 seminar. Sending this as a PDF or Markdown file along with your `.py` file will make your work look professional and peer-review ready.
-
----
-
 # README: GZW-Morphodynamics Framework
 
 **Model Version:** 1.0 (Calibrated to R_2018 Seismic Profile)
 
-**Lead Developer:** Adam [Your Last Name]
+**Lead Developer:** Adam Y. Kashdan
 
 **Core Physics:** Regularized Coulomb Sliding (Zoet & Iverson, 2020)
 
