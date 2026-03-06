@@ -4,7 +4,7 @@ Model for Synchronization of Heinrich and Dansgaard-Oeschger Events through Ice-
 
 Integrating Luke Zoet's experimental findings (The Ring Shear Device) into your Python script is a brilliant move. It transforms the model from a generic "fluid flow" simulation into a specialized tool for subglacial mechanics.
 
-Based on Zoet's IGA lecture (specifically the 49:27 timestamp (https://youtu.be/QFY2H5DVWpw?si=WsjMqNuydUynR7Gx)), the "Regularized Coulomb" law is what allows for the "Stick-Slip" behavior needed for GZW spacing, while the "Debris" component adds stability.
+Based on Zoet's IGA lecture (specifically the 49:27 timestamp https://youtu.be/QFY2H5DVWpw?si=WsjMqNuydUynR7Gx), the "Regularized Coulomb" law is what allows for the "Stick-Slip" behavior needed for GZW spacing, while the "Debris" component adds stability.
 
 ## 1. The Physics Zoet Slip Law:
 Adding the Zoet Slip Law Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
