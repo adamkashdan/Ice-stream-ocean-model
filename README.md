@@ -87,7 +87,7 @@ Mentions "overprinting." This is the biggest challenge in model.
 The Problem: If the glacier retreats too slowly, the new GZW will just sit on top of the old one, creating one giant pile.
 The Solution: It need to ensure your retreat rate ($dR/dt$) is faster than the wedge growth rate ($dH/dt$). In Python code, this means the "Slip" phase must move the grounding line far enough that the next "Stick" phase creates a distinct, separate bump.
 
-Concern about overprinting; the model needs a "threshold-and-reset" logic. The goal is to ensure that when the ice slips, it doesn't merely slide a few meters; it must "jump" to a new stable position. This creates the gaps between the wedges that C.L. Batchelor, J.A. Dowdeswell, et al. see in the Beaufort Sea.
+Concern about overprinting; the model needs a "threshold-and-reset" logic. The goal is to ensure that when the ice slips, it doesn't merely slide a few meters; it must "jump" to a new stable position. This creates the gaps between the wedges (Batchelor and Dowdeswell, 2015).
 
 ## 9. The Logic: "The Jump Distance"
 To avoid overprinting, we need to introduce a Minimum Jump Distance ($L_{jump}$). In nature, this is often controlled by the bathymetry (the next "hill" or shallow spot on the seafloor). In Phyton code, we can tie the "Slip" phase to a rapid drop in basal resistance ($\tau_b$) that only stops when the ice reaches a new equilibrium.
