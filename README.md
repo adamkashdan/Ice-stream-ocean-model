@@ -35,6 +35,7 @@ Phase C (Slip): Once the driving stress exceeds the lowered $\tau_c$, the ice "b
 Phase D (Reset): The surge thins the ice, $N$ increases again, and the ice "sticks" at a new location. A new GZW starts to form at the new gap.
 
 Adding a Sediment Flux component is the next step in turning our physics model into a geomorphological tool. In glaciology, the growth of a Grounding Zone Wedge (GZW) is essentially a mass-balance problem: sediment is delivered to the grounding line by the ice stream and "dumped" where the ice starts to float.
+
 ## 4. The Physics 2:
    The Exner Equation for Subglacial SedimentTo model the changing height of the seafloor (the GZW), we use a version of the Exner Equation. It states that the change in bed elevation ($z_b$) over time depends on the divergence of the sediment flux ($q_s$):
 
@@ -54,7 +55,7 @@ Where
 - **∇ · $q_s$**  
   Divergence of the sediment flux.
 
-## 5. Calculating q_s (the “Conveyor Belt”)
+## 5. Calculating $q_s (the “Conveyor Belt”)
 
 Following the *stick–slip* concept of Zoet, sediment flux is assumed to be proportional to the basal sliding velocity and the thickness of the deforming till layer:
 
