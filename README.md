@@ -55,7 +55,7 @@ Where
 - **∇ · $q_s$**  
   Divergence of the sediment flux.
 
-## 5. Calculating $q_s (the “Conveyor Belt”)
+## 5. Calculating $q_s$ (the “Conveyor Belt”)
 
 Following the *stick–slip* concept of Zoet, sediment flux is assumed to be proportional to the basal sliding velocity and the thickness of the deforming till layer:
 
