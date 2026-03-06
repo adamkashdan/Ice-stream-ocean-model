@@ -7,7 +7,7 @@ Integrating Luke Zoet's experimental findings (The Ring Shear Device) into your 
 Based on Zoet's IGA lecture (specifically the 49:27 timestamp https://youtu.be/QFY2H5DVWpw?si=WsjMqNuydUynR7Gx), the "Regularized Coulomb" law is what allows for the "Stick-Slip" behavior needed for GZW spacing, while the "Debris" component adds stability.
 
 ## 1. The Physics Zoet Slip Law:
-Adding the Zoet Slip Law Currently, many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
+Adding the Zoet Slip Law Currently (Zoet & Iverson 2020), many simple models use a power-law (Weertman) sliding: $\tau_b = C u^{1/m}$. To reflect Zoet's research, you should replace or modify your basal shear stress function to a Regularized Coulomb Law.
 This law states that the basal drag ($\tau_b$) increases with velocity ($u$) but is capped by the strength of the till (which is controlled by effective pressure $N$ and the friction coefficient $\tan \phi$):
 
 $\tau_b = \dfrac{\tau_c u}{u + u_0}$
