@@ -36,9 +36,9 @@ def regularized_coulomb_drag(U_b, N, mu_c=0.6, A_visc=1e4, p=1.0,
     N           : float  — effective pressure (Pa)
     mu_c        : float  — Coulomb friction coefficient
     A_visc      : float  — viscous drag coefficient (Pa yr/m)
-    p           : float  — rollover sharpness [Zoet seminar 19:04]
-    has_clasts  : bool   — large clasts present → lower transition U_t [Video IGS seminar 16:28]
-    has_debris  : bool   — debris-laden basal ice → rate-strengthening [Video IGS seminar 48:21]
+    p           : float  — rollover sharpness [Video IGS Zoet seminar 19:04]
+    has_clasts  : bool   — large clasts present → lower transition U_t [Video IGS Zoet seminar 16:28]
+    has_debris  : bool   — debris-laden basal ice → rate-strengthening [Video IGS Zoet seminar 48:21]
     bed_type    : str    — 'soft' (till) or 'hard' (bedrock)
 
     Returns
@@ -47,12 +47,12 @@ def regularized_coulomb_drag(U_b, N, mu_c=0.6, A_visc=1e4, p=1.0,
     regime : str   — 'viscous' or 'coulomb'
     """
     tau_c    = mu_c * N
-    # Large clasts concentrate stress → Coulomb transition at lower U_b [Video IGS seminar 17:42]
+    # Large clasts concentrate stress → Coulomb transition at lower U_b [Video IGS Zoet seminar 17:42]
     clast_factor = 3.0 if has_clasts else 1.0
     tau_visc = A_visc * clast_factor * U_b
-    # Regularized Coulomb rollover [Video IGS seminar 19:10]
+    # Regularized Coulomb rollover [Video IGS Zoet seminar 19:10]
     tau_b    = (tau_visc**p * tau_c) / (tau_visc**p + tau_c**p) ** (1.0 / p)
-    # Debris on hard beds: additional rate-strengthening term [Video IGS seminar 48:21–49:00]
+    # Debris on hard beds: additional rate-strengthening term [Video IGS Zoet seminar 48:21–49:00]
     if has_debris and bed_type == 'hard':
         tau_b += 0.05 * A_visc * U_b
     regime = 'coulomb' if tau_visc >= tau_c else 'viscous'
@@ -67,7 +67,7 @@ def compute_sediment_flux(tau_b, regime, q_s_base=0.035,
     """
     Sediment flux at grounding line modulated by basal drag state.
 
-    In Coulomb regime drag saturates → flux caps (stabilizing) [Zoet 51:02]
+    In Coulomb regime drag saturates → flux caps (stabilizing) [Video IGS Zoet seminar 51:02]
     """
     excess = max(0.0, tau_b - tau_threshold)
     q_s    = q_s_base + erosion_coeff * excess
@@ -99,7 +99,7 @@ N_eff   = rho_ice * g * H_ice * 0.1    # effective pressure (Pa), ~10% flotation
 
 U_stick = 0.5       # near-zero sliding speed during stick phase (m/yr)
 
-HAS_CLASTS = True   # till with large clasts [Zoet 16:28]
+HAS_CLASTS = True   # till with large clasts [Video IGS Zoet seminar 16:28]
 HAS_DEBRIS = False  # no frozen-fringe debris (marine soft bed)
 BED_TYPE   = 'soft'
 
