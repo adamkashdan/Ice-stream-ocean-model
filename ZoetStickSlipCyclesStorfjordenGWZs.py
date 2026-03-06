@@ -47,7 +47,7 @@ def regularized_coulomb_drag(U_b, N, mu_c=0.6, A_visc=1e4, p=1.0,
     regime : str   — 'viscous' or 'coulomb'
     """
     tau_c    = mu_c * N
-    # Large clasts concentrate stress → Coulomb transition at lower U_b [17:42]
+    # Large clasts concentrate stress → Coulomb transition at lower U_b [Video IGS seminar 17:42]
     clast_factor = 3.0 if has_clasts else 1.0
     tau_visc = A_visc * clast_factor * U_b
     # Regularized Coulomb rollover [Video IGS seminar 19:10]
