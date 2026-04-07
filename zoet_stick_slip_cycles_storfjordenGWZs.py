@@ -108,14 +108,18 @@ BED_TYPE   = 'soft'
 # 6. GROUNDING LINE POSITIONS & STICK DURATIONS
 #    Anchored to core locations in R_2018 seismic profile
 #    Ice retreated S→N; outer GZW formed first
+#    Ages derived from Storfjorden core basal post-glacial sediments (Gusev et al. 2024 / R_2018)
 # ─────────────────────────────────────────────────────────────────────────────
-gl_outer  = int(24000 / dx)   # ~HH12-1209GC
-gl_middle = int(15000 / dx)   # ~JM10-12GC
-gl_inner  = int( 5000 / dx)   # ~NP05-86GC
+gl_outer  = int(24000 / dx)   # ~HH12-1209GC (basal age ~14.25 ka BP)
+gl_middle = int(15000 / dx)   # ~JM10-12GC  (basal age ~12.66 ka BP)
+gl_inner  = int( 5000 / dx)   # ~NP05-86GC  (basal age ~11.46 ka BP)
 
 retreat_steps = [gl_outer, gl_middle, gl_inner]
-durations     = [600, 1200, 800]    # years: tuned so middle GZW is tallest
+# Duration based on time between ungrounding events:
+# Middle (14.25 -> 12.66 = 1.59 kyr), Inner (12.66 -> 11.46 = 1.2 kyr)
+durations     = [1000, 1590, 1200]  
 labels        = ['Outer', 'Middle', 'Inner']
+ages          = ['14.25 ka', '12.66 ka', '11.46 ka']
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -125,8 +129,8 @@ gzws       = np.zeros(nx)
 stick_info = []
 
 print(f"\n{'GZW':>6}  {'GL (km)':>8}  {'τ_b (kPa)':>10}  "
-      f"{'Regime':>8}  {'q_s (m²/yr)':>12}  {'Peak dep. (m)':>14}")
-print("─" * 65)
+      f"{'Regime':>8}  {'q_s (m²/yr)':>12}  {'Peak dep. (m)':>14}  {'Age':>10}")
+print("─" * 78)
 
 for i, (gl_idx, years) in enumerate(zip(retreat_steps, durations)):
     tau_b, regime = regularized_coulomb_drag(
@@ -139,10 +143,10 @@ for i, (gl_idx, years) in enumerate(zip(retreat_steps, durations)):
     deposit = q_s * years
     kernel  = gzw_kernel(nx, gl_idx)
     gzws   += deposit * kernel
-    stick_info.append((gl_idx, labels[i], deposit))
+    stick_info.append((gl_idx, labels[i], deposit, ages[i]))
 
     print(f"{labels[i]:>6}  {x[gl_idx]/1000:>8.1f}  {tau_b/1000:>10.3f}  "
-          f"{regime:>8}  {q_s:>12.4f}  {deposit:>14.1f}")
+          f"{regime:>8}  {q_s:>12.4f}  {deposit:>14.1f}  {ages[i]:>10}")
 
 gzws = np.clip(gzws, 0, 38.0)   # cap to seismic-observed max ~38 m (50 ms TWT)
 
@@ -235,14 +239,14 @@ ax.plot(x/1000, tg,     color='#8B4513', lw=1.6, zorder=6, label='TG')
 ax.plot(x/1000, seabed, color='#00ACC1', lw=2.0, zorder=7, label='Seabed')
 
 # GZW annotations
-for gl_idx, name, deposit in stick_info:
+for gl_idx, name, deposit, age in stick_info:
     peak = gzws[gl_idx]
     top  = tg[gl_idx]
     ax.axvline(x[gl_idx]/1000, color='white', lw=0.8, alpha=0.35,
                linestyle=':', zorder=8)
-    ax.annotate(f'{name} GZW\n~{peak:.0f} m',
+    ax.annotate(f'{name} GZW\n~{age}\n~{peak:.0f} m',
                 xy=(x[gl_idx]/1000, top),
-                xytext=(x[gl_idx]/1000 + 1.0, top + 7),
+                xytext=(x[gl_idx]/1000 + 1.0, top + 9),
                 fontsize=7.5, color='white', fontweight='bold',
                 arrowprops=dict(arrowstyle='->', color='white', lw=0.9))
 
