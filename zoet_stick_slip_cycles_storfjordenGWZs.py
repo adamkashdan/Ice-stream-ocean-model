@@ -108,7 +108,7 @@ BED_TYPE   = 'soft'
 # 6. GROUNDING LINE POSITIONS & STICK DURATIONS
 #    Anchored to core locations in R_2018 seismic profile
 #    Ice retreated S→N; outer GZW formed first
-#    Ages derived from Storfjorden core basal post-glacial sediments (Gusev et al. 2024 / R_2018)
+#    Ages derived from Storfjorden core basal post-glacial sediments (Nielsena & Rasmussen 2018, Gusev et al. 2024 / R_2018)
 # ─────────────────────────────────────────────────────────────────────────────
 gl_outer  = int(24000 / dx)   # ~HH12-1209GC (basal age ~14.25 ka BP)
 gl_middle = int(15000 / dx)   # ~JM10-12GC  (basal age ~12.66 ka BP)
