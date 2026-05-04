@@ -80,7 +80,7 @@ When you run this in loop, the following behavior emerges:
 Stick Phase: $x_{gl}$ is stationary. update_gzw_height repeatedly adds height to the same spot. A steep GZW grows.
 Slip Phase: The "Zoet Slip Law" triggers. $x_{gl}$ jumps forward 10km in the model.
 New Stick Phase: The grounding line stops at $x_{gl} + 10km$. A new wedge starts to grow.
-The Result: Your z_bed array will eventually show a series of bumps—periodically spaced GZWs—whose distance is determined entirely by your till mechanics. 
+The Result: Your z_bed array will eventually show a series of bumps—periodically spaced GZWs—whose distance is determined entirely by till mechanics. 
 
 ## 8. Technical Note: Preventing "Overprinting"
 Mentions "overprinting." This is the biggest challenge in model.
