@@ -7,6 +7,8 @@ import warnings
 warnings.filterwarnings('ignore', 'The iteration is not making good progress')
 
 """
+This is Python version of model SSA doi.org/10.
+5281/zenodo.5245271 (Robel,2021).
 Christian,J.E.,Robel,A.A.,Catania,G.,
 Stearns,L.,Miller,L.E.,&Munevar
 Garcia,S.(2026).Grounding‐zonewedge
