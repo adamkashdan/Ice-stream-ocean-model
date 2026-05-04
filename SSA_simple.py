@@ -6,6 +6,17 @@ import warnings
 # Suppress fsolve warnings if desired, though we handle output manually
 warnings.filterwarnings('ignore', 'The iteration is not making good progress')
 
+"""
+Christian,J.E.,Robel,A.A.,Catania,G.,
+Stearns,L.,Miller,L.E.,&Munevar
+Garcia,S.(2026).Grounding‐zonewedge
+formationandeffectsonice‐streamretreat
+andstability.JournalofGeophysical
+Research:EarthSurface,131,
+e2025JF008509.https://doi.org/10.1029/
+2025JF008509
+"""
+
 class Params:
     pass
 
