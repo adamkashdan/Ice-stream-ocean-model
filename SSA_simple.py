@@ -12,7 +12,7 @@ This is Python version of model SSA doi.org/10.
 Christian,J.E.,Robel,A.A.,Catania,G.,
 Stearns,L.,Miller,L.E.,& Munevar
 Garcia,S.(2026).
-Grounding‐zonewedge formationandeffectsonice‐streamretreat andstability. Journal of Geophysical Research: Earth Surface,131,
+Grounding‐zonewedge formation and effectson ice‐stream retreat and stability. Journal of Geophysical Research: Earth Surface,131,
 e2025JF008509.https://doi.org/10.1029/2025JF008509
 """
 
