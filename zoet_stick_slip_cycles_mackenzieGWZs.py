@@ -1,5 +1,7 @@
 """
 GZW Formation Simulation — Amundsen Gulf / Mackenzie Margin
+Batchelor, C. L., Dowdeswell, J. A., & Pietras, J. T. (2014). Evidence for multiple Quaternary ice advances and fan development from the Amundsen Gulf cross-shelf trough and slope, 
+Canadian Beaufort Sea margin. Marine and Petroleum Geology, 52, 125-143.
 ================================================================
 Physics:  Regularized Coulomb sliding law (Zoet & Iverson 2020)
           Debris-modulated Exner sediment flux
