@@ -2,6 +2,10 @@
 GZW Formation Simulation — Amundsen Gulf / Mackenzie Margin
 Batchelor, C. L., Dowdeswell, J. A., & Pietras, J. T. (2014). Evidence for multiple Quaternary ice advances and fan development from the Amundsen Gulf cross-shelf trough and slope, 
 Canadian Beaufort Sea margin. Marine and Petroleum Geology, 52, 125-143.
+Figure 8. A: Seismic pro le of a strike line through two near-surface, asymmetric sedimentary wedges of Facies Tii within Sequence 1 on the continental shelf between Amundsen
+Gulf and M’Clure Strait. C and D:
+Enlarged seismic pro les through the southern and northern wedges, respectively, showing the acoustically semi-transparent character, dipping internal re ections and asymmetric
+geometry of the wedges.
 ================================================================
 Physics:  Regularized Coulomb sliding law (Zoet & Iverson 2020)
           Debris-modulated Exner sediment flux
