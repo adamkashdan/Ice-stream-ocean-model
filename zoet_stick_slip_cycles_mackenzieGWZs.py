@@ -6,6 +6,7 @@ Figure 8. A: Seismic pro le of a strike line through two near-surface, asymmetri
 Gulf and M’Clure Strait. C and D:
 Enlarged seismic pro les through the southern and northern wedges, respectively, showing the acoustically semi-transparent character, dipping internal re ections and asymmetric
 geometry of the wedges.
+Figure 9. C: Seismic pro through the Sequence 2 wedge, showing its asymmetric shape and dipping internal reflections.
 ================================================================
 Physics:  Regularized Coulomb sliding law (Zoet & Iverson 2020)
           Debris-modulated Exner sediment flux
