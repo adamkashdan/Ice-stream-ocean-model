@@ -3,6 +3,8 @@ GZW Formation Simulation — calibrated to R_2018 seismic profile
 Rasmussen Nielsen Storfjorden GWZs 2018
 "Reconstruction of ice sheet retreat after the Last Glacial Maximum in
 Storfjorden, southern Svalbard"
+Fig. 6. Seismic lines showing cross-sections parallel (N-S) and perpendicular (E-W) to the ice flow.
+a–b) Inner GZW; c–d) Middle GZW; e–f) Outer GZW
 ================================================================
 Physics:  Regularized Coulomb sliding law (Zoet & Iverson 2020)
           Debris-modulated Exner sediment flux
